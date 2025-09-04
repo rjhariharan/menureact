@@ -1,0 +1,187 @@
+/* 🌟 Global Styling */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #1a1a1a;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Content Container for Body and Image */
+.content-container {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin: 1rem 0;
+}
+
+.recipe-contianer img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Page Wrapper */
+.page {
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* Heading */
+.main-head {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffa500;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Menu Grid */
+.main-parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 📦 Recipe Card Container */
+.recipe-contianer {
+  background: #2a2a2a;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid #333;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.recipe-contianer:hover {
+  transform: translateY(-5px);
+  border-color: #ffa500;
+  box-shadow: 0 8px 25px rgba(255, 165, 0, 0.2);
+}
+
+/* 📝 Header Section */
+.recipe-header {
+  background: #ff8c00;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content {
+  text-align: center;
+  flex: 1;
+}
+
+.recipe-header h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.recipe-header .time {
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.dislike-button, .like-button {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  padding: 3px 5px;
+  color: #1a1a1a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* 🍳 Body Section */
+.recipe-body {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+.recipe-body p {
+  margin: 0.5rem 0;
+}
+
+/* 👣 Footer Section */
+.recipe-footer {
+  margin-top: 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #1a1a1a;
+  padding: 8px 12px;
+  background: #ffb347;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-parent {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .recipe-contianer {
+    padding: 1.2rem;
+  }
+  
+  .page {
+    padding: 30px 15px;
+  }
+  
+  .main-head {
+    font-size: 2rem;
+  }
+}
